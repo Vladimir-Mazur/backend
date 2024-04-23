@@ -95,7 +95,7 @@
     errp($errors);
   }
 
-  $db = new PDO('mysql:host=localhost;dbname=u67402', 'u67402', '2593797',
+  $db = new PDO('mysql:host=localhost;dbname=u67402', 'u67407', '2987127',
      [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
   
   $inQuery = implode(',', array_fill(0, count($like_lang), '?'));
