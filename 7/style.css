@@ -1,0 +1,121 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+label{
+    margin-bottom: 0;
+}
+form{
+    width: 400px;
+    border: 1px #aaa solid;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+}
+form h3{
+    text-align: center;
+    font-weight: normal;
+    margin-top: 10px;
+}
+form input{
+    font-size: 16px;
+}
+form input,
+form textarea,
+form select{
+    outline: none;
+    border: 1px #aaa solid;
+    border-radius: 3px;
+    padding: 3px 6px;
+}
+.w100{
+    width: 100%;
+}
+form > div{
+    margin: 6px 0;
+}
+form .ent{
+    text-align: left;
+}
+form .ent label{
+    margin-left: 10px;
+}
+form .ent > input{
+    margin-left: 12px;
+}
+form textarea{
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    font-size: 16px;
+}
+form button,
+.logout_form,
+.login_form{
+    width: 100px;
+    height: 30px;
+    background: rgb(60, 255, 190);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: calc(50% - 50px);
+    outline: none !important;
+}
+form button:active{
+    filter: brightness(120%);
+}
+.logout_form,
+.login_form{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: unset;
+    background: brown !important;
+    padding: 3px 8px;
+    height: unset;
+    color: #fff !important;
+}
+.login_form{
+    background: rgb(56, 56, 231) !important;
+}
+.message{
+    font-size: 21px;
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.messageError{
+    color: red;
+    font-size: 15px;
+}
+.borred{
+    border-color: red;
+}
+.colred,
+.message_error{
+    color: red !important;
+}
+.message_info{
+    color: orange !important;
+}
+.pform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    min-height: 900px;
+}
+
+.pformAuth > form > div{
+    margin: 20px 0;
+}
+
+.editBut{
+    background: orange !important;
+}

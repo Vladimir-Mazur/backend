@@ -1,0 +1,118 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    text-align: center;
+    background: #fff;
+    z-index: 10;
+}
+header div{
+    display: inline-block;
+}
+header div:not(:first-child){
+    margin-left: 30px;
+}
+header a{
+    cursor: pointer;
+    color: #000;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 2px 7px #aaaaaa;
+    width: 100%;
+}
+#data{
+    margin-top: 50px;
+}
+.analize{
+    width: unset;
+    margin: 20px auto;
+}
+.analize td{
+    min-width: 160px;
+}
+tr{
+    opacity: 1;
+}
+thead, th, td{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    padding: 6px 8px;
+    border: 1px #aaa solid;
+    text-align: center;
+    vertical-align: middle;
+}
+tbody tr:nth-child(even){
+    background: rgba(180, 220, 250, 0.1);
+}
+tbody tr:nth-child(odd){
+    background: #ffffff;
+}
+tbody tr:nth-child(odd):hover{
+    transition: 0.2s;
+    filter: brightness(110%);
+    background: #e3e3e3 !important;
+}
+tbody tr:nth-child(even):hover{
+    transition: 0.2s;
+    filter: brightness(110%);
+    background: rgba(180, 200, 250, 0.2) !important;
+}
+thead{
+    background: #eee;
+}
+.wb{
+    word-break: break-all;
+}
+.remove{
+    background: #e22d2d;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 6px;
+    cursor: pointer;
+    outline: none;
+}
+button:hover{
+    filter: brightness(112%);
+}
+.form_del{
+    font-size: 20px;
+    color: green;
+    text-align: center;
+}
+.hid{
+    display: none;
+}
+
+
+.exit{
+    background: rgb(56, 56, 231);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 6px;
+    cursor: pointer;
+    outline: none;
+}
+form{
+    margin: 10px;
+    text-align: right;
+}
