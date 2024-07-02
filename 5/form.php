@@ -72,6 +72,11 @@
             <label for="oznakomlen" class="<?php echo ($errors['oznakomlen'] != NULL) ? 'colred' : ''; ?>">С контрактом ознакомлен (а)</label>
             <div class="errpodinp"><?php echo $messages['oznakomlen']?></div>
         </div>
+        <div>
+            <input type="checkbox" name="zachet" id="zachet" <?php echo ($values['zachet'] != NULL) ? 'checked' : ''; ?>>
+            <label for="zachet" class="<?php echo ($errors['zachet'] != NULL) ? 'colred' : ''; ?>">С контрактом ознакомлен (а)</label>
+            <div class="errpodinp"><?php echo $messages['zachet']?></div>
+        </div>
         <?php
             if($log) echo '<button type="submit" class="editBut">Изменить</button>';
             else echo '<button type="submit">Отправить</button>';
