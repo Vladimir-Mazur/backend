@@ -74,7 +74,7 @@
         </div>
         <div>
             <input type="checkbox" name="zachet" id="zachet" <?php echo ($values['zachet'] != NULL) ? 'checked' : ''; ?>>
-            <label for="zachet" class="<?php echo ($errors['zachet'] != NULL) ? 'colred' : ''; ?>">С контрактом ознакомлен (а)</label>
+            <label for="zachet" class="<?php echo ($errors['zachet'] != NULL) ? 'colred' : ''; ?>">Зачет получил (а)</label>
             <div class="errpodinp"><?php echo $messages['zachet']?></div>
         </div>
         <?php
