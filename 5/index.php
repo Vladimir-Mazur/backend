@@ -23,6 +23,7 @@
     $like_lang = (!empty($_COOKIE['like_lang_error']) ? $_COOKIE['like_lang_error'] : '');
     $biography = (!empty($_COOKIE['biography_error']) ? $_COOKIE['biography_error'] : '');
     $oznakomlen = (!empty($_COOKIE['oznakomlen_error']) ? $_COOKIE['oznakomlen_error'] : '');
+    $zachet =(!empty($_COOKIE['zachet_error']) ? $_COOKIE['oznakomlen_error'] : '');
 
     $errors = array();
     $messages = array();
@@ -67,6 +68,7 @@
     val_empty('like_lang', $like_lang);
     val_empty('biography', $biography);
     val_empty('oznakomlen', $oznakomlen);
+    val_empty('zachet', $zachet);
     
     $like_langsa = explode(',', $values['like_lang']);
 
@@ -97,6 +99,7 @@
         setVal('like_lang', $like_lang);
         setVal('biography', $fet['biography']);
         setVal('oznakomlen', $fet['oznakomlen']);
+        setVal('zachet', $fet['zachet']);
       }
       catch(PDOException $e){
         print('Error : ' . $e->getMessage());
@@ -115,6 +118,7 @@
     $like_lang = (!empty($_POST['like_lang']) ? $_POST['like_lang'] : '');
     $biography = (!empty($_POST['biography']) ? $_POST['biography'] : '');
     $oznakomlen = (!empty($_POST['oznakomlen']) ? $_POST['oznakomlen'] : '');
+    $zachet = (!empty($_POST['zachet']) ? $_POST['zachet'] : '');
 
     if(isset($_POST['logout_form'])){
       del_cook('fio', 1);
@@ -125,6 +129,7 @@
       del_cook('like_lang', 1);
       del_cook('biography', 1);
       del_cook('oznakomlen', 1);
+      del_cook('zachet', 1);
       session_destroy();
       header('Location: ./');
       exit();
@@ -192,6 +197,7 @@
       val_empty('biography', 'Длина текста > 65 535 символов', strlen($biography) > 65535);
     }
     val_empty('oznakomlen', "Ознакомьтесь с контрактом", empty($oznakomlen));
+    val_empty('zachet', "Зачет сдан", empty($zachet));
     
     if ($error) {
       header('Location: index.php');
@@ -206,6 +212,7 @@
       del_cook('like_lang');
       del_cook('biography');
       del_cook('oznakomlen');
+      del_cook('zachet');
     }
 
     if ($log) {
@@ -253,6 +260,7 @@
       setcookie('like_value', $like, time() + 24 * 60 * 60 * 365);
       setcookie('biography_value', $biography, time() + 24 * 60 * 60 * 365);
       setcookie('oznakomlen_value', $oznakomlen, time() + 24 * 60 * 60 * 365);
+      setcookie('zachet_value', $zachet, time() + 24 * 60 * 60 * 365);
     }
     setcookie('save', '1');
     header('Location: ./');
