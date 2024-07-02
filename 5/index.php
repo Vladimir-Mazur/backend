@@ -23,7 +23,7 @@
     $like_lang = (!empty($_COOKIE['like_lang_error']) ? $_COOKIE['like_lang_error'] : '');
     $biography = (!empty($_COOKIE['biography_error']) ? $_COOKIE['biography_error'] : '');
     $oznakomlen = (!empty($_COOKIE['oznakomlen_error']) ? $_COOKIE['oznakomlen_error'] : '');
-    $zachet =(!empty($_COOKIE['zachet_error']) ? $_COOKIE['oznakomlen_error'] : '');
+    $zachet =(!empty($_COOKIE['zachet_error']) ? $_COOKIE['zachet_error'] : '');
 
     $errors = array();
     $messages = array();
